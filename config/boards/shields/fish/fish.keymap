@@ -177,6 +177,7 @@
         };
 
         layer_mouse {
+            layer = <8>;
             bindings = <
                         &none       &mmv MOVE_UP &none      &none               &none       &none       &mmv MOVE_UP &none      
 &none       &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none   
