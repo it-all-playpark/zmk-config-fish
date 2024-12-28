@@ -41,7 +41,7 @@
 
 &mmv_input_listener {
     input-processors = <&zip_temp_layer 2 2000>;
-}
+};
 
 / {
     // 独自の入力を定義できる（上級者向け）
