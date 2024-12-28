@@ -13,7 +13,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // 特殊入力の挙動を調整できる
-
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <225>;
@@ -89,11 +88,6 @@
             key-positions = <5 6>;
             bindings = <&kp CAPS>;
         };
-
-        combo_mouse {
-            key-positions = <24 25>;
-            bindings = <&tog 8>;
-        };
     };
     
 
@@ -107,7 +101,7 @@
         layer_keymap {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-&kp Q       &mt LCTRL E &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S  &mt RCTRL H &kp P       
+&lt 8 Q     &mt LCTRL E &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S  &mt RCTRL H &lt 8 P     
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 2 FSLH  &lt 1 SPACE         &lt 3 ESC   &mt RSHFT COLON 
             >;
@@ -177,7 +171,6 @@
         };
 
         layer_mouse {
-            layer = <8>;
             bindings = <
                         &none       &mmv MOVE_UP &none      &none               &none       &none       &mmv MOVE_UP &none      
 &none       &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none     &none       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none   
