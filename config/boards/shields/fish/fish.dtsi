@@ -1,4 +1,14 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+ // 1. マウス機能を有効にする
+&mmv {
+    time-to-max-speed-ms = <500>;     // 最大速度に達するまでの時間
+    acceleration-exponent = <1>;      // 加速度の指数
+};
+
+&mwh {
+    time-to-max-speed-ms = <500>;     // スクロールの最大速度に達するまでの時間
+    acceleration-exponent = <1>;      // スクロールの加速度の指数
+};
 
 / {
     chosen {
