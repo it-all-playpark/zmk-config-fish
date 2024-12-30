@@ -106,7 +106,7 @@
         layer_keymap {
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
-&lt 4 Q     &mt LCTRL E &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S  &mt RCTRL H &lt 4 P     
+&lt 4 Q     &mt LSHFT E &mt LGUI I  &mt LCTRL A &mt LALT O  &kp COMMA           &kp G       &mt RALT T  &mt RCTRL N &mt RGUI S  &mt RSHFT H &lt 4 P     
             &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
                                                 &lt 1 FSLH  &lt 5 SPACE         &lt 2 ESC   &mt RSHFT COLON 
             >;
@@ -115,7 +115,7 @@
         layer_math {
             bindings = <
                         &kp N1      &kp N2      &kp N3      &trans              &kp CARET   &kp LT      &kp EQUAL   &kp GT      
-&lt 4 TILDE &mt LCTRL N0 &mt LGUI N4 &mt LALT N5 &mt LSHFT N6 &kp DOT           &kp UNDER   &mt RSHFT PLUS &mt RALT MINUS &mt RGUI STAR &mt RCTRL FSLH &lt 4 PRCNT 
+&lt 4 TILDE &mt LSHFT N0 &mt LGUI N4 &mt LCTRL N5 &mt LALT N6 &kp DOT           &kp UNDER   &mt RALT PLUS &mt RCTRL MINUS &mt RGUI STAR &mt RSHFT FSLH &lt 4 PRCNT 
             &kp DLLR    &kp N7      &kp N8      &kp N9                                      &kp EXCL    &kp QMARK   &kp COLON   &kp SEMI    
                                                 &trans      &trans              &trans      &trans      
             >;
@@ -124,9 +124,9 @@
         layer_navi {
             bindings = <
                         &kp LBKT    &kp DQT     &kp RBKT    &kp AMPS            &kp C_VOL_UP &kp ESC    &kp UP      &kp CAPS    
-&lt 7 AT    &mt LCTRL HASH &mt LCTRL LPAR &mt LALT SQT &mt LSHFT RPAR &kp PIPE  &kp C_VOL_DN &kp LEFT   &kp DOWN    &kp RIGHT   &kp C_BRI_UP &lt 7 PSCRN 
+&lt 7 AT    &mt LSHFT HASH &mt LGUI LPAR &mt LCTRL SQT &mt LALT RPAR &kp PIPE   &kp C_VOL_DN &kp LEFT   &kp DOWN    &kp RIGHT   &kp C_BRI_UP &lt 7 PSCRN 
             &kp BSLH    &kp LBRC    &kp GRAVE   &kp RBRC                                    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_BRI_DN 
-                                                &lt 6 BSPC  &trans              &trans      &none       
+                                                &trans      &trans              &trans      &trans      
             >;
         };
 
@@ -150,10 +150,10 @@
 
         layer_fn {
             bindings = <
-                        &kp LBKT    &kp AMPS    &kp RBKT    &kp PLUS            &kp EQUAL   &kp LT      &kp UP      &kp GT      
-&kp GRAVE   &mt LCTRL SQT &mt LGUI COMMA &mt LALT AT &mt LSHFT DOT &kp STAR     &kp BSPC    &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL     &kp HASH    
+                        &kp LBKT    &kp AMPS    &kp RBKT    &kp PLUS            &trans      &kp EQUAL   &kp UP      &kp BSLH    
+&kp GRAVE   &mt LSHFT AT &mt LGUI COMMA &mt LCTRL SQT &mt LALT DOT &kp STAR     &kp BSPC    &kp LEFT    &kp DOWN    &kp RIGHT   &mt RSHFT DEL &kp HASH  
             &kp EXCL    &kp LPAR    &kp PIPE    &kp RPAR                                    &kp CARET   &kp PRCNT   &kp DLLR    &kp SEMI    
-                                                &trans      &trans              &lt 7 RET   &mt RSHFT TAB 
+                                                &trans      &trans              &lt 3 RET   &mt RSHFT TAB 
             >;
         };
     };
