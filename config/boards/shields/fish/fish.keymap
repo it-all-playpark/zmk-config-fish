@@ -12,6 +12,9 @@
 #include <dt-bindings/zmk/pointing.h>
 
 
+// Layer aliases
+#define layer_mouse 4
+
 // 特殊入力の挙動を調整できる
 
 &mt {
@@ -39,6 +42,22 @@
 &key_repeat {
 };
 
+&mmv {
+    time-to-max-speed-ms = <120>;
+    acceleration-exponent = <6>;
+};
+
+&msc {
+    time-to-max-speed-ms = <80>;
+    acceleration-exponent = <10>;
+};
+
+&mmv_input_listener {
+    set_mouse_fast {
+        layers = <layer_mouse>;
+        input-processors = <&zip_xy_scaler 2 1>;
+    };
+};
 
 / {
     // 独自の入力を定義できる（上級者向け）
