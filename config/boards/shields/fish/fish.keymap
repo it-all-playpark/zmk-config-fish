@@ -3,7 +3,6 @@
 
 
 // 定義を呼んでくる
-#include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
@@ -11,9 +10,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-
-// Layer aliases
-#define layer_mouse 4
 
 // 特殊入力の挙動を調整できる
 
@@ -42,22 +38,6 @@
 &key_repeat {
 };
 
-&mmv {
-    time-to-max-speed-ms = <120>;
-    acceleration-exponent = <6>;
-};
-
-&msc {
-    time-to-max-speed-ms = <80>;
-    acceleration-exponent = <10>;
-};
-
-&mmv_input_listener {
-    set_mouse_fast {
-        layers = <layer_mouse>;
-        input-processors = <&zip_xy_scaler 2 1>;
-    };
-};
 
 / {
     // 独自の入力を定義できる（上級者向け）
@@ -132,17 +112,17 @@
             bindings = <
                         &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
 &lt 4 Q     &mt LCTRL E &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S  &mt RCTRL H &lt 4 P     
-            &kp Z       &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &kp B       
+            &lt 1 Z     &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &lt 1 B     
                                                 &lt 1 FSLH  &lt 5 SPACE         &lt 2 ESC   &mt RSHFT COLON 
             >;
         };
 
-        layer_math {
+        layer_number {
             bindings = <
-                        &kp N1      &kp N2      &kp N3      &trans              &kp CARET   &kp LT      &kp EQUAL   &kp GT      
-&kp TILDE   &mt LSHFT N0 &mt LGUI N4 &mt LCTRL N5 &mt LALT N6 &kp DOT           &kp UNDER   &mt RALT PLUS &mt RCTRL MINUS &mt RGUI STAR &mt RSHFT FSLH &kp PRCNT 
-            &kp DLLR    &kp N7      &kp N8      &kp N9                                      &kp EXCL    &kp QMARK   &kp COLON   &kp SEMI    
-                                                &trans      &trans              &trans      &trans      
+                        &kp N1      &kp N2      &kp N3      &trans              &trans      &kp N1      &kp N2      &kp N3      
+&trans      &mt LCTRL N0 &mt LGUI N4 &mt LALT N5 &mt LSHFT N6 &trans            &trans      &mt RSHFT N4 &mt RALT N5 &mt RGUI N6 &mt RSHFT N0 &trans    
+            &trans      &kp N7      &kp N8      &kp N9                                      &kp N7      &kp N8      &kp N9      &trans      
+                                                &trans      &kp N0              &kp N0      &trans      
             >;
         };
 
@@ -179,6 +159,20 @@
 &kp GRAVE   &mt LCTRL AT &mt LGUI COMMA &mt LALT SQT &mt LSHFT DOT &kp STAR     &kp BSPC    &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL     &kp HASH    
             &kp EXCL    &kp LPAR    &kp PIPE    &kp RPAR                                    &kp CARET   &kp PRCNT   &kp DLLR    &kp SEMI    
                                                 &trans      &trans              &lt 3 RET   &mt RSHFT TAB 
+            >;
+        };
+
+        layer_extra1 {
+            bindings = <
+                        &#include <behaviors.dtsi>
+#include <dt-bindings zmk="" keys.h="">
+#include <dt-bindings zmk="" mouse.h="">
+#include <dt-bindings zmk="" bt.h="">
+#include <dt-bindings zmk="" outputs.h="">
+#include <dt-bindings zmk="" pointing.h=""></dt-bindings></dt-bindings></dt-bindings></dt-bindings></dt-bindings></behaviors.dtsi> &trans &trans &trans &trans &trans &trans &trans 
+&trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans      
+            &trans      &trans      &trans      &trans                                      &trans      &trans      &trans      &trans      
+                                                &trans      &trans              &trans      &trans      
             >;
         };
     };
