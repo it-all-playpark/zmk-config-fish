@@ -89,11 +89,6 @@
             bindings = <&kp CAPS>;
         };
 
-        combo_math {
-            key-positions = <0 1>;
-            bindings = <&tog 1>;
-        };
-
         combo_studio_unlock {
             key-positions = <20 21 22 23>;
             bindings = <&studio_unlock>;
@@ -122,7 +117,7 @@
                         &kp N1      &kp N2      &kp N3      &trans              &trans      &kp N1      &kp N2      &kp N3      
 &trans      &mt LCTRL N0 &mt LGUI N4 &mt LALT N5 &mt LSHFT N6 &trans            &trans      &mt RSHFT N4 &mt RALT N5 &mt RGUI N6 &mt RSHFT N0 &trans    
             &trans      &kp N7      &kp N8      &kp N9                                      &kp N7      &kp N8      &kp N9      &trans      
-                                                &trans      &kp N0              &kp N0      &trans      
+                                                &kp N0      &trans              &trans      &kp N0      
             >;
         };
 
@@ -159,20 +154,6 @@
 &kp GRAVE   &mt LCTRL AT &mt LGUI COMMA &mt LALT SQT &mt LSHFT DOT &kp STAR     &kp BSPC    &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL     &kp HASH    
             &kp EXCL    &kp LPAR    &kp PIPE    &kp RPAR                                    &kp CARET   &kp PRCNT   &kp DLLR    &kp SEMI    
                                                 &trans      &trans              &lt 3 RET   &mt RSHFT TAB 
-            >;
-        };
-
-        layer_extra1 {
-            bindings = <
-                        &#include <behaviors.dtsi>
-#include <dt-bindings zmk="" keys.h="">
-#include <dt-bindings zmk="" mouse.h="">
-#include <dt-bindings zmk="" bt.h="">
-#include <dt-bindings zmk="" outputs.h="">
-#include <dt-bindings zmk="" pointing.h=""></dt-bindings></dt-bindings></dt-bindings></dt-bindings></dt-bindings></behaviors.dtsi> &trans &trans &trans &trans &trans &trans &trans 
-&trans      &trans      &trans      &trans      &trans      &trans              &trans      &trans      &trans      &trans      &trans      &trans      
-            &trans      &trans      &trans      &trans                                      &trans      &trans      &trans      &trans      
-                                                &trans      &trans              &trans      &trans      
             >;
         };
     };
