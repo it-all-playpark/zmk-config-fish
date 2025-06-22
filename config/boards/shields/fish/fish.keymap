@@ -74,11 +74,6 @@
             bindings = <&kp LANG1>;
         };
 
-        combo_tog_3 {
-            key-positions = <8 19>;
-            bindings = <&tog 3>;
-        };
-
         combo_reset_L {
             key-positions = <3 8 13>;
             bindings = <&bootloader>;
@@ -110,10 +105,10 @@
 
         layer_keymap {
             bindings = <
-                        &kp L       &kp U       &kp F       &kp MINUS           &kp K       &kp W       &kp R       &kp Y       
+                        &kp L       &kp U       &kp F       &lt 3 MINUS         &lt 3 K     &kp W       &kp R       &kp Y       
 &lt 4 Q     &mt LCTRL E &mt LGUI I  &mt LALT A  &mt LSHFT O &kp COMMA           &kp G       &mt RSHFT T &mt RALT N  &mt RGUI S  &mt RCTRL H &lt 4 P     
             &lt 1 Z     &kp X       &kp C       &kp V                                       &kp D       &kp M       &kp J       &lt 1 B     
-                                                &lt 1 FSLH  &lt 5 SPACE         &lt 2 ESC   &mt RSHFT COLON 
+                                                &kp FSLH    &lt 5 SPACE         &lt 2 ESC   &mt RSHFT COLON 
             >;
         };
 
@@ -128,9 +123,9 @@
 
         layer_navi {
             bindings = <
-                        &kp LBKT    &kp DQT     &kp RBKT    &kp AMPS            &kp C_VOL_UP &kp ESC    &kp UP      &kp CAPS    
-&kp AT      &mt LSHFT HASH &mt LGUI LPAR &mt LCTRL SQT &mt LALT RPAR &kp PIPE   &kp C_VOL_DN &kp LEFT   &kp DOWN    &kp RIGHT   &kp C_BRI_UP &kp LS(LG(N3)) 
-            &kp BSLH    &kp LBRC    &kp GRAVE   &kp RBRC                                    &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_BRI_DN 
+                        &none       &none       &none       &none               &none       &none       &none       &none       
+&none       &none       &none       &none       &none       &none               &none       &kp C_BRI_DN &none      &kp C_BRI_UP &none      &none       
+            &none       &none       &none       &none                                       &kp C_VOL_DN &kp C_MUTE &kp C_VOL_UP &none      
                                                 &trans      &trans              &trans      &trans      
             >;
         };
